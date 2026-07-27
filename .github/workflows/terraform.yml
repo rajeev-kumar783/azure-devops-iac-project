@@ -1,4 +1,4 @@
-name: My First GitHub Action
+name: Terraform CI
 
 on:
   push:
@@ -6,14 +6,19 @@ on:
       - main
 
 jobs:
-  hello:
-
+  terraform:
     runs-on: ubuntu-latest
 
-    steps:
+    defaults:
+      run:
+        working-directory: Env_module/Pre_prod
 
+    steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Print Message
-        run: echo "Hello Rajeev, Welcome to GitHub Actions!"
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Check Terraform Version
+        run: terraform version
