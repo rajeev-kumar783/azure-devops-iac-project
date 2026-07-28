@@ -1,5 +1,19 @@
-variable "resource_group_name" {}
-variable "subnet_name" {}
-variable "virtual_network_name" {}
-variable "public_ip_name" {}
-variable "vms" {}
+variable "resource_group_name" {
+  type = map(any)
+}
+
+variable "subnet_name" {
+  type = map(any)
+}
+
+variable "virtual_network_name" {
+  type = map(any)
+}
+
+variable "public_ip_name" {
+  type = map(any)
+}
+
+variable "vms" {
+  type = map(any)
+}
