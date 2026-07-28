@@ -17,8 +17,6 @@ The objective of this project is to automate Azure resource provisioning, mainta
 
 The infrastructure follows a modular Terraform approach:
 
-![Azure Terraform Architecture](./docs/azure-terraform-architecture.png)
-
 ```
 Developer
     |
@@ -190,8 +188,6 @@ Create Pull Request → Review → Approval → Merge into Main Branch
 # ⚙️ GitHub Actions CI/CD Pipeline
 
 The CI/CD pipeline automatically performs:
-
-![GitHub Actions Pipeline](./docs/github-actions-pipeline.png)
 
 ```
 Code Commit
