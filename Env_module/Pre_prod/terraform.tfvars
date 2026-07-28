@@ -9,6 +9,10 @@ resource_group_name = {
     name     = "ajay-rg"
     location = "southindia"
   }
+  rg3 = {
+    name     = "aviral-rg"
+    location = "southindia"
+  }
 }
 
 virtual_network_name = {
