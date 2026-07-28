@@ -72,7 +72,7 @@ jobs:
         with:
           directory: Env_module/Pre_prod
           framework: terraform
-          soft_fail: false
+          soft_fail: true
 
       #-----------------------------------------
       # Azure Login
@@ -92,3 +92,7 @@ jobs:
           ARM_SUBSCRIPTION_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).subscriptionId }}
           ARM_TENANT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).tenantId }}
         run: terraform plan -input=false
+      
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main'
+        run: terraform apply -auto-approve -input=false
