@@ -5,7 +5,10 @@ resource_group_name = {
     name     = "rajeev-rg"
     location = "southindia"
   }
-
+tags = {
+  Environment = "PreProd"
+  Owner       = "Rajeev"
+}
 }
 
 virtual_network_name = {
