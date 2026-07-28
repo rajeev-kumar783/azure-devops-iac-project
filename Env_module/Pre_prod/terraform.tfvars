@@ -5,8 +5,8 @@ resource_group_name = {
     name     = "rajeev-rg"
     location = "southindia"
   }
-  rg1 = {
-    name     = "rajeev-rg"
+  rg2 = {
+    name     = "ajay-rg"
     location = "southindia"
   }
 }
