@@ -20,9 +20,15 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
+      # Azure Authentication
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Check Terraform Version
         run: terraform version
-      
+
       - name: Terraform Format Check
         run: terraform fmt -check
 
@@ -31,3 +37,6 @@ jobs:
 
       - name: Terraform Validate
         run: terraform validate
+
+      - name: Terraform Plan
+        run: terraform plan -input=false
