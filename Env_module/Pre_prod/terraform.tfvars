@@ -1,12 +1,12 @@
 
 resource_group_name = {
-
   rg1 = {
-    name     = "rajeev-rg"
+    name     = "rajeev-rg-01"
     location = "southindia"
   }
-  rg1 = {
-    name     = "rajeev-rg"
+
+  rg2 = {
+    name     = "rajeev-rg-02"
     location = "southindia"
   }
 }
