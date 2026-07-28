@@ -1,19 +1,12 @@
-
 resource_group_name = {
   rg1 = {
-    name     = "rajeev-rg-01"
-    location = "southindia"
-  }
-
-  rg2 = {
-    name     = "rajeev-rg-02"
+    name     = "rajeev-rg"
     location = "southindia"
   }
 }
 
 virtual_network_name = {
   vnet1 = {
-
     name                = "rajeev-vnet"
     location            = "southindia"
     resource_group_name = "rajeev-rg"
@@ -23,14 +16,11 @@ virtual_network_name = {
 
 subnet_name = {
 
-
-
   subnet_1 = {
     name                 = "backend-subnet"
     resource_group_name  = "rajeev-rg"
     virtual_network_name = "rajeev-vnet"
     address_prefixes     = ["10.0.1.0/24"]
-
   }
 
   subnet_2 = {
@@ -38,34 +28,28 @@ subnet_name = {
     resource_group_name  = "rajeev-rg"
     virtual_network_name = "rajeev-vnet"
     address_prefixes     = ["10.0.2.0/24"]
-
   }
-
 }
-
 
 public_ip_name = {
 
   pip1 = {
-
     name                = "pip-frontend-vm"
     resource_group_name = "rajeev-rg"
     location            = "southindia"
     allocation_method   = "Static"
-
   }
 
   pip2 = {
-
     name                = "pip-backend-vm"
     resource_group_name = "rajeev-rg"
     location            = "southindia"
     allocation_method   = "Static"
   }
-
 }
 
 vms = {
+
   vm1 = {
     nic_name        = "frontend-vm-nic"
     location        = "southindia"
@@ -82,6 +66,7 @@ vms = {
     image_sku       = "22_04-lts"
     image_version   = "latest"
   }
+
   vm2 = {
     nic_name        = "backend-vm-nic"
     location        = "southindia"
@@ -99,5 +84,3 @@ vms = {
     image_version   = "latest"
   }
 }
-
-
